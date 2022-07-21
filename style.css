@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(23, 30, 34);
+  color: rgb(152, 178, 182);
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+  border: 10px solid rgb(152, 178, 182);
+  /* background-color: rgb(23, 30, 34); */
+  background-color: darkslategray;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board div {
+  width: 96px;
+  height: 96px;
+  border: 2px solid rgb(152, 178, 182);
+
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tile-clicked {
+  background-color: rgb(114, 127, 141);
+}
+
+.title,
+.status,
+.message {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  padding: 10px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.status {
+  display: flex;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#score-text,
+#highscore-text {
+  margin-left: 0;
+}
+
+#chance-text,
+#status-text {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#score,
+#chance,
+#highscore,
+#status {
+  margin-left: 10px;
+}
+
+#status {
+  color: green;
+}
+
+.title {
+  padding: 10px;
+  font-size: 34px;
+  font-weight: 700;
+  color: lightskyblue;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+#restart {
+  padding: 6px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: 2px solid rgb(152, 178, 182);
+  font-weight: 500;
+  background-color: rgb(23, 30, 34);
+}
+
+#info {
+  padding: 6px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: auto;
+  cursor: pointer;
+  border: 2px solid rgb(152, 178, 182);
+  font-weight: 500;
+  background-color: rgb(23, 30, 34);
+}
+
+.footer {
+  margin-top: 80px;
+  font-size: 14px;
+}

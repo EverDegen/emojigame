@@ -5,35 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Emoji Game</title>
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="title">EMOJI GAME</div>
-    <div class="message">
-        <span id="highscore-text">Highscore:</span><span id="highscore"></span>
-        <span id="status-text">Status:</span><span id="status">Ready</span>
+    <div class="container">
+        <header class="header">
+            <h1 class="heading-primary">emoji game</h1>
+            <div class="message">
+                <p>Highscore:&nbsp;<span id="highscore">00</span></p>
+                <p>Status:&nbsp;<span id="status">Ready</span></p>
+            </div>
+            <div class="stats">
+                <p>Score:&nbsp;<span id="score"></span></p>
+                <p>Chance:&nbsp;<span id="chance"></span></p>
+            </div>
+        </header>
+        <main class="main">
+            <div class="board" id="board">
+            </div>
+            <div class="info-modal hidden">
+                <button class="btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+
+                </button>
+                <p><b>How to play?</b><br /><br /> Well it's pretty much self explainatry but here is a quick info to
+                    get started.<br />Every emoji has been assigned some points, so when you click on a emoji the value
+                    of that emoji get added to score. (max value = 11, min value = -6). There are some special like 💗
+                    will reset the chance back to 3, 💛 will increase chance by 1, 💣 will reset the chance to 0 and
+                    game over.<br /><br /><b>Rules</b><br />1. Score can't be in negative<br />2. Chance can't be zero
+                </p>
+            </div>
+            <div class="controls">
+                <button class="btn btn-restart" id="restart">restart</button>
+                <button class="btn btn-info" id="info">info</button>
+            </div>
+        </main>
+        <footer>Made with 💗 © 2022</footer>
     </div>
-    <div class="status">
-        <span id="score-text">Score:</span><span id="score"></span>
-        <span id="chance-text">Chance:</span><span id="chance"></span>
-    </div>
-
-    <!--Board-->
-    <div id="board"></div>
-
-    <!--Controls-->
-    <div class="controls">
-        <span id="restart">Restart</span>
-        <span id="info">info</span>
-    </div>
-
-
-    <!--Footer-->
-    <div class="footer">Made with 💗 © 2022</div>
-
     <script src="script.js"></script>
 </body>
 

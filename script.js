@@ -39,7 +39,7 @@ document.getElementById('score').innerText = score;
 //this function gets random key from the object each time
 let randomProperty = function (obj) {
   let keys = Object.keys(obj);
-  return keys[(keys.length * Math.random()) << 0];
+  return keys[(keys.length * Math.random()) << 0]; //bitwise operator -- value << 0 --left shift
 };
 
 window.onload = function () {
@@ -125,7 +125,8 @@ document.getElementById('restart').addEventListener('click', function () {
 
 //info page
 document.getElementById('info').addEventListener('click', function () {
-  const infoPage = `<p><br /><b>How to play?</b><br /> Well it's pretty much self explainatry but here is a quick info to get started.<br />Every emoji has been assigned some points, so when you click on a emoji the value of that emoji get added to score. (max value = 11, min value = -6). There are some special like 💗 will reset the chance back to 3, 💛 will increase chance by 1, 💣 will reset the chance to 0 and game over.<br /><br /><b>Rules</b><br />1. Score can't be in negative<br />2. Chance can't be zero
-  </p>`;
-  document.getElementById('board').innerHTML = infoPage;
+  document.querySelector('.info-modal').classList.toggle('hidden');
+});
+document.querySelector('.btn-close').addEventListener('click', function () {
+  document.querySelector('.info-modal').classList.add('hidden');
 });

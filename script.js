@@ -22,6 +22,37 @@ const emoji = {
   '💎': 9,
   '👑': 11,
   '🪁': 7,
+  '🎲': 6,
+  '🥕': 2,
+  '🌞': 1,
+  '🐋': 3,
+  '🦉': 5,
+  '🎈': 2,
+  '🚗': 2,
+  '🐬': 7,
+  '🐧': 9,
+  '👨': 3,
+  '👩': 3,
+  '👍': 6,
+  '🙏': 1,
+  '👊': 0,
+  '👌': 7,
+  '🎁': 10,
+  '🩸': 5,
+  '💡': 3,
+  '📷': 5,
+  '⌚': 5,
+  '🍕': 4,
+  '🍗': 9,
+  '🍨': 7,
+  '🍫': 6,
+  '🍉': 7,
+  '🍓': 2,
+  '🍎': 5,
+  '🌹': 6,
+  '🚆': 5,
+  '⭐': 6,
+  '🌙': 6,
 };
 
 let row = 4;
@@ -125,8 +156,11 @@ document.getElementById('restart').addEventListener('click', function () {
 
 //info page
 document.getElementById('info').addEventListener('click', function () {
-  document.querySelector('.info-modal').classList.toggle('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
+  document.querySelector('.info-modal').classList.remove('hidden');
 });
+
 document.querySelector('.btn-close').addEventListener('click', function () {
+  document.querySelector('.overlay').classList.add('hidden');
   document.querySelector('.info-modal').classList.add('hidden');
 });

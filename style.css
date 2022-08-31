@@ -80,6 +80,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s;
+  user-select: none;
 }
 
 .board div:hover {
